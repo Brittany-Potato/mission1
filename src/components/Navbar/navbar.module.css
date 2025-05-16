@@ -13,7 +13,7 @@
   display: flex;
   position: fixed;
   left: 0%;
-  height: 80px;
+  height: 85px;
   width: 300px;
 }
 
@@ -28,19 +28,82 @@
 }
 
 .contact {
-    color: #304149;
+  color: #304149;
+  font-size: 25px;
 }
 
 .findus {
-    color: #304149;
+  color: #304149;
+  font-size: 25px;
 }
 
 .or {
   font-style: italic;
   color: #304149;
+  font-size: smaller;
 }
 
 .login,
 .register {
   color: #0073cf;
+  font-size: 25px;
+}
+
+@media only screen and (max-width: 1602px) {
+  .logo {
+    height: 65px;
+    width: 240px;
+  }
+
+  .contact,
+  .findus {
+    font-size: 90%;
+    margin-top: 5%;
+  }
+
+  .login,
+  .register {
+    font-size: 80%;
+  }
+}
+
+@media only screen and (max-width: 1207px) {
+  .logo {
+    height: 55px;
+    width: 220px;
+  }
+
+  .contact,
+  .findus {
+    font-size: 80%;
+  }
+
+  .login,
+  .register {
+    font-size: 70%;
+  }
+  .or {
+    font-size: 60%;
+  }
+}
+
+@media only screen and (max-width: 1040px) {
+    .contact,
+  .findus {
+    font-size: 70%;
+    margin-top: 10%;
+  }
+
+  .login,
+  .register {
+    font-size: 60%;
+  }
+  .or {
+    font-size: 50%;
+  }
+}
+
+/* Make a hamburger menu */
+@media only screen and (max-width: 1040px) {
+  
 }

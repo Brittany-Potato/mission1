@@ -23,3 +23,17 @@ Setup steps taken:
 2. Clearing all unnecessary code from the appropriate files.
 3. Installed React-router-dom
     npm i react-router-dom
+4. Used links from the Turners website to make the Navbar links functional.
+
+
+To-Do list:
+1. Frontend: Interface that allows users to upload photos of their vehicle
+2. Backend/API: Recieves the images and send them to an AI model for prediction
+3. AI Model: Custom vision model hosted through Azure:
+    Chat GPT proved to be a valuble resource leading me through the steps to making my vehicle classification model.
+    First I created 3 tags including:
+    1. Sedan 121 images
+    2. SUV 121 images
+    3. Truck 121 images
+4. Cloud storage for storing the images
+5. Logging/Monitoring: Tracks useage and model performance

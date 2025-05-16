@@ -1,0 +1,9 @@
+.maindivcontainer {
+    background-color: white;
+    display: flex;
+    position: fixed;
+    width: 85%;
+    height: 90%;
+    top: 17%;
+    left: 6%;
+}
