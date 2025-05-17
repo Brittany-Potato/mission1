@@ -6,4 +6,20 @@
     height: 90%;
     top: 17%;
     left: 6%;
+    color: orange;
+}
+
+.title {
+    display: flex;
+    position: absolute;
+    left: 27%;
+}
+
+.imagediv {
+    background-color: blueviolet;
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    left: 10%;
+    top: 15%;
 }
