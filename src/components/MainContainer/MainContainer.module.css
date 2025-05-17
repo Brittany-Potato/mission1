@@ -1,25 +1,40 @@
 .maindivcontainer {
-    background-color: white;
-    display: flex;
-    position: fixed;
-    width: 85%;
-    height: 90%;
-    top: 17%;
-    left: 6%;
-    color: orange;
+  background-color: white;
+  display: flex;
+  position: fixed;
+  width: 85%;
+  height: 90%;
+  top: 17%;
+  left: 6%;
+  color: orange;
 }
 
 .title {
-    display: flex;
-    position: absolute;
-    left: 27%;
+  display: flex;
+  position: absolute;
+  left: 27%;
+}
+
+.hiddenbutton {
+  display: none;
+}
+
+.custombutton {
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: orange;
 }
 
 .imagediv {
-    background-color: blueviolet;
-    width: 80%;
-    height: 80%;
-    position: absolute;
-    left: 10%;
-    top: 15%;
+  background-color: blueviolet;
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  left: 10%;
+  top: 15%;
 }

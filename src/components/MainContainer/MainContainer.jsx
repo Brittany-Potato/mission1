@@ -15,7 +15,9 @@ export default function MainContainer() {
       <div className={styles.maindivcontainer}>
         <h1 className={styles.title}>Get an insurance quote here</h1>
         <div className={styles.imagediv}>
-          <input type="file" accept="image/*" onChange={handleFileChange} />
+          <input type="file" accept="image/*" id='fileUpload' onChange={handleFileChange} className={styles.hiddenbutton}/>
+          <label htmlFor="fileUpload" className={styles.custombutton}>Upload Vehicle Image</label>
+          {fileName && <p>Selected file: {fileName}</p>}
         </div>
       </div>
     );
