@@ -26,6 +26,7 @@ Setup steps taken:
 4. Used links from the Turners website to make the Navbar links functional.
 5. Created a file upload button and made a container to put it in which allowed me to make a custon button for Easy styling.
 6. Connected the button to the backend and got it sending the uploaded image to the backend.
+7. Got the backend sending the prediction back to the frontend to displa to the user.
 
 
 To-Do list:
@@ -55,3 +56,7 @@ Created my enviroment variables
 - Port number
 - KEY for Azure
 - Endpoint for Azure
+.Env file containing:
+1. ODE_APP_PORT=***
+2. KEY=***
+3. CUSTOM_VISION_ENDPOINT=***

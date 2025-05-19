@@ -18,12 +18,12 @@ export default function MainContainer() {
     }
   };
 
-  //backend
+  //backend function
   const uploadToBackend = async () => {
     if (!fileName) {
       alert("Please select a file first.");
       return;
-    }
+    } //Makes sure a file has been selected  before proceeding with the prepared image file "file"
 
     const formData = new FormData();
     formData.append("file", file); //the backends expected key is now "file"
