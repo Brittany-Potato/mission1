@@ -15,12 +15,20 @@
   left: 27%;
 }
 
+.insuranceinfo {
+  position: absolute;
+  right: 32%;
+  font-size: large;
+}
+
 .hiddenbutton {
   display: none;
+  position: absolute;
 }
 
 .custombutton {
   display: inline-block;
+  position: absolute;
   padding: 10px 20px;
   color: white;
   border: none;
@@ -28,6 +36,14 @@
   font-size: 16px;
   cursor: pointer;
   background-color: orange;
+  bottom: 15%;
+  right: 52%;
+}
+
+.uploadbutton {
+  position: absolute;
+  bottom: 9%;
+  right: 45%;
 }
 
 .imagediv {
@@ -37,4 +53,38 @@
   position: absolute;
   left: 10%;
   top: 15%;
+}
+
+.previewimage {
+display: flex;
+position: absolute;
+background-color: yellow;
+border: solid yellow 3px;
+box-shadow: orange 4px 4px;
+max-width: 60%;
+max-height: 60%;
+bottom: 30%;
+right: 28%;
+}
+
+.selectedfile {
+  display: flex;
+  position: absolute;
+  right: 32%;
+  bottom: 14%;
+}
+
+.predictioncontainer {
+  position: absolute;
+  right: 15%;
+  background-color: yellow;
+  width: 10%;
+  height: 30%;
+  top: 30%;
+  padding: 10px;
+  border: 2px solid black;
+}
+
+.predictiontitle {
+  
 }

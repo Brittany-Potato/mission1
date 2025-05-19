@@ -14,9 +14,9 @@ If you are developing a production application, we recommend using TypeScript wi
 # Mission One
 # ~~~~~~~~~~~
 Mission:
-
 Create a prootype solution in a cloudbase application to identify the types of cehicles based on images users upload.
 
+Frontend:
 Setup steps taken:
 1. Created a new folder and made a react app in it called 'mission 1'
     npm create vite@latest
@@ -24,6 +24,8 @@ Setup steps taken:
 3. Installed React-router-dom
     npm i react-router-dom
 4. Used links from the Turners website to make the Navbar links functional.
+5. Created a file upload button and made a container to put it in which allowed me to make a custon button for Easy styling.
+6. Connected the button to the backend and got it sending the uploaded image to the backend.
 
 
 To-Do list:
@@ -37,3 +39,19 @@ To-Do list:
     3. Truck 121 images
 4. Cloud storage for storing the images
 5. Logging/Monitoring: Tracks useage and model performance
+
+Backend:
+Setup steps taken:
+Installed
+- Express(is a web framework that handles HTTP requests)
+- Axios(Makes requests to Azure for HTTP)
+- Cors(Lets the rontend talk to the backend/cross-origin resource sharing)
+- Dotenv(Where you can store your enviroment variables and hide from github)
+- Multer(Handlles file uploads as a middleware)
+Imported
+- fs(Reads files)
+- path(Helps with building correct fie paths)
+Created my enviroment variables
+- Port number
+- KEY for Azure
+- Endpoint for Azure
