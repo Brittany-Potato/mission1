@@ -6,7 +6,7 @@ export default function MainContainer() {
   const [fileName, setFileName] = useState("");
   const [file, setFile] = useState(null);
   const [previewUrl, setPreviewUrl] = useState(null);
-  const [predictionResult, setPredictionResult] = useState()
+  const [predictionResult, setPredictionResult] = useState();
 
   //The function that allows a user to upload a file/image
   const handleFileChange = (event) => {
@@ -58,10 +58,16 @@ export default function MainContainer() {
 
   return (
     <div className={styles.maindivcontainer}>
+      <a href="www.turners.co.nz" className={styles.navigationtab}>
+        Home <span className={styles.navsymbol}>>></span> Quote
+      </a>
       <h1 className={styles.title}>Get an insurance quote here</h1>
       <div className={styles.imagediv}>
         {/* Had to create a div to contain the button inorder to style it properly */}
-        <p className={styles.insuranceinfo}>Upload an image so we can calculate your insurance premium</p>
+        <p className={styles.insuranceinfo}>
+          Upload an image of your vehicle so we can calculate your insurance
+          premium
+        </p>
         <input
           type="file"
           accept="image/*"
@@ -72,11 +78,17 @@ export default function MainContainer() {
         <label htmlFor="fileUpload" className={styles.custombutton}>
           Upload Vehicle Image
         </label>
-        {fileName && <p className={styles.selectedfile}>Selected file: {fileName}</p>}
+        {fileName && (
+          <p className={styles.selectedfile}>Selected file: {fileName}</p>
+        )}
 
-        {previewUrl &&  (
+        {previewUrl && (
           <div className={styles.previewcontainer}>
-            <img src={previewUrl} alt="uploaded preview" className={styles.previewimage} />
+            <img
+              src={previewUrl}
+              alt="uploaded preview"
+              className={styles.previewimage}
+            />
           </div>
         )}
       </div>
@@ -87,13 +99,12 @@ export default function MainContainer() {
       </div>
       {predictionResult && (
         <div className={styles.predictioncontainer}>
-          <h3 className={styles.predictiontitle}>Prediction result</h3>
+          <h3 className={styles.predictiontitle}>Prediction results:</h3>
           <ul className={styles.predictionlist}>
             {predictionResult.predictions.map((p, index) => (
               <li key={index} className={styles.predictionresult}>
-                <strong>
-                  {p.tagName}
-                </strong>: {(p.probability * 100).toFixed(1)}%
+                <strong>{p.tagName}</strong>: {(p.probability * 100).toFixed(1)}
+                %
               </li>
             ))}
           </ul>
