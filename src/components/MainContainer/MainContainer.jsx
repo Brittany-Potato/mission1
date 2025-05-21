@@ -2,13 +2,13 @@ import { React, useState } from "react";
 import styles from "./MainContainer.module.css";
 
 export default function MainContainer() {
-  //Variables
+  //~~~~~~~~~~~~~~~Variables
   const [fileName, setFileName] = useState("");
   const [file, setFile] = useState(null);
   const [previewUrl, setPreviewUrl] = useState(null);
   const [predictionResult, setPredictionResult] = useState();
 
-  //The function that allows a user to upload a file/image
+  //!The function that allows a user to upload a file/image
   const handleFileChange = (event) => {
     if (event.target.files.length > 0) {
       const selectedFile = event.target.files[0];
@@ -18,27 +18,27 @@ export default function MainContainer() {
     }
   };
 
-  //backend function
+  //~~~~~~~~~~~~~~~~~~backend function
   const uploadToBackend = async () => {
     if (!fileName) {
       alert("Please select a file first.");
       return;
-    } //Makes sure a file has been selected  before proceeding with the prepared image file "file"
+    } //!Makes sure a file has been selected  before proceeding with the prepared image file "file"
 
     const formData = new FormData();
-    formData.append("file", file); //the backends expected key is now "file"
+    formData.append("file", file); //!the backends expected key is now "file"
 
     try {
       const response = await fetch("http://localhost:4000/upload", {
         method: "POST",
         body: formData,
-      });
+      }); //!Fetching
 
       if (response.ok) {
         const contentType = response.headers.get("content-type");
 
         if (contentType && contentType.includes("application/json")) {
-          const data = await response.json(); // expects valid JSON
+          const data = await response.json(); //!expects valid JSON
           alert("Uploaded successfully!");
           console.log(data);
           setPredictionResult(data.prediction);
@@ -62,6 +62,8 @@ export default function MainContainer() {
         Home <span className={styles.navsymbol}>>></span> Quote
       </a>
       <h1 className={styles.title}>Get an insurance quote here</h1>
+      
+{/* image div, contains the file upload button, paragraph and image */}
       <div className={styles.imagediv}>
         {/* Had to create a div to contain the button inorder to style it properly */}
         <p className={styles.insuranceinfo}>
@@ -81,7 +83,7 @@ export default function MainContainer() {
         {fileName && (
           <p className={styles.selectedfile}>Selected file: {fileName}</p>
         )}
-
+{/* The image preview */}
         {previewUrl && (
           <div className={styles.previewcontainer}>
             <img
@@ -91,12 +93,22 @@ export default function MainContainer() {
             />
           </div>
         )}
+        <div className={styles.paragraphdiv}>
+          <h3 className={styles.explanationtitle}>Why do we need a photo?</h3>
+  <p className={styles.explanation }>
+    In order to calculate your insurance premium we need to you upload an image file of your vehicle so we can determine if it is an Sedan, SUV or Truck
+</p>
+</div>
       </div>
+
+{/* submit button */}
       <div>
         <button onClick={uploadToBackend} className={styles.uploadbutton}>
           Submit Image
         </button>
       </div>
+
+{/* Prediction results that get shown one the frontend recieves the information from the backend and azure. */}
       {predictionResult && (
         <div className={styles.predictioncontainer}>
           <h3 className={styles.predictiontitle}>Prediction results:</h3>
@@ -110,6 +122,8 @@ export default function MainContainer() {
           </ul>
         </div>
       )}
+
+
     </div>
   );
 }

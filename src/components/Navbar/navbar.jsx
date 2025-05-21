@@ -7,6 +7,7 @@ export default function navbar() {
       <img src="../../images/turnerslogo.png" alt="" className={styles.logo} />
       <div className={styles.navlinks}>
         <h2>
+          {/* Links lead to relevant pages from the real turners website */}
           <span className={styles.login}><a href="https://www.turners.co.nz/Login/?ReturnUrl=/">Login</a></span>{" "}
           <span className={styles.or}>Or</span>{" "}
           <span className={styles.register}><a href="https://www.turners.co.nz/Login/Registration/">Register</a></span>
